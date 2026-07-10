@@ -9,7 +9,7 @@ export const ORG = {
   established: "19 September 2020",
   address: "101, Vandana Apartment, Opposite Amrita Nursing Home, Lalpur, Ranchi – 834001, Jharkhand, India",
   director: "Ashutosh Kumar",
-  phone: "+91 6206857414",
+  phone: "+91 7209102111",
   officePhone: "+91 651-3595607",
   email: "arshiassociation@gmail.com",
   partnershipEmail: "info@aasw.in",

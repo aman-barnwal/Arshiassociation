@@ -1,0 +1,134 @@
+{
+  "theme": "light",
+  "archetype": "1 (Organic & Earthy)",
+  "design_philosophy": "Premium, modern, elegant, and trustworthy NGO website prioritizing emotional engagement, transparency, and clarity. The aesthetic relies on generous spacing, elegant serif headings mixed with highly readable body fonts, modern soft cards, and subtle animations.",
+  "colors": {
+    "primary": "#064E3B",
+    "primary_hover": "#047857",
+    "primary_light": "#D1FAE5",
+    "accent": "#D97706",
+    "accent_hover": "#B45309",
+    "background_base": "#FFFFFF",
+    "background_alt": "#F8FAFC",
+    "background_green_tint": "#F0FDF4",
+    "text_main": "#0F172A",
+    "text_muted": "#475569",
+    "border": "#E2E8F0"
+  },
+  "typography": {
+    "heading_font": "Playfair Display",
+    "body_font": "Manrope",
+    "heading_strategy": "Elegant serif headings with tight tracking for a premium, trustworthy feel. Never center-align paragraphs; use left-alignment for dense content.",
+    "sizes": {
+      "h1": "text-5xl md:text-6xl tracking-tight leading-tight font-bold",
+      "h2": "text-3xl md:text-4xl tracking-tight font-semibold",
+      "h3": "text-2xl font-medium",
+      "h4": "text-xl font-medium",
+      "body": "text-base leading-relaxed text-slate-700",
+      "small_label": "text-sm uppercase tracking-[0.2em] text-emerald-800 font-semibold"
+    }
+  },
+  "spacing_and_layout": {
+    "philosophy": "Generous Spacing. Use 2-3x more spacing than typical designs. Containers with borders must have internal padding (p-6 or p-8) to prevent text collision.",
+    "section_padding": "py-20 md:py-32",
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "grid_modes": {
+      "marketing_cards": "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8",
+      "bento_gallery": "grid-cols-1 md:grid-cols-4 gap-4",
+      "programs_grid": "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+    }
+  },
+  "components": {
+    "cards": {
+      "style": "Modern cards with rounded-2xl or rounded-3xl corners, soft ambient shadows (shadow-[0_8px_30px_rgb(0,0,0,0.04)]), white background, and a subtle 1px border (border-slate-100).",
+      "hover": "Hover state should lift slightly (-translate-y-1) and increase shadow depth."
+    },
+    "buttons": {
+      "primary": "bg-emerald-900 text-white rounded-full px-8 py-3 hover:bg-emerald-800 transition-all font-medium inline-flex items-center justify-center gap-2",
+      "secondary": "bg-emerald-50 text-emerald-900 rounded-full px-8 py-3 hover:bg-emerald-100 transition-all font-medium inline-flex items-center justify-center gap-2",
+      "accent": "bg-amber-600 text-white rounded-full px-8 py-3 hover:bg-amber-700 shadow-md shadow-amber-900/10 transition-all font-medium inline-flex items-center justify-center gap-2"
+    },
+    "glassmorphism": {
+      "style": "Use for sticky navbar and floating impact stat cards: backdrop-blur-xl bg-white/80 border-b border-white/20 shadow-sm"
+    }
+  },
+  "animations": {
+    "library": "framer-motion",
+    "page_transitions": "Fade in and slight upward translation (y: 20 -> 0) on load for main content areas.",
+    "scroll_effects": "Staggered fade-ins for grids (programs, projects, gallery).",
+    "counters": "Animated count-up for impact numbers using framer-motion or react-countup.",
+    "hover_effects": "Smooth transforms and shadow transitions on cards and buttons."
+  },
+  "icons": {
+    "library": "lucide-react",
+    "style": "Premium, consistent stroke width (1.5). Use emerald-900 or amber-600 for icon colors."
+  },
+  "pages_and_structure": {
+    "Home": "Full-screen hero (min-h-screen) with background photo, dark gradient overlay (bg-black/50) for text contrast. H1: 'Empowering Communities. Transforming Lives. Building a Better Tomorrow.' CTAs. Featured impact counters section. Featured programs.",
+    "About": "Journey, Mission/Vision, Director's message with elegant blockquote styling and signature font.",
+    "Programs": "Grid of 14 program areas with premium icons/photos and short descriptions.",
+    "Projects": "Detailed project pages (Dhoop Batti Making, International Mahila Diwas, Vocational & Computer Training, Health Camp) using rich text and photo galleries.",
+    "Impact": "Animated counters (1619 lives, 7 projects, 125 health camp beneficiaries, 30 women MEDP, 25 computer training). Recharts for beneficiary bar chart.",
+    "Gallery": "Masonry layout with lightbox. Category filters as pill tabs.",
+    "Annual_Reports": "PDF cards with embedded viewer + download button.",
+    "Transparency": "Registration cards (CIN, PAN, NGO Darpan, CSR, 12A, 80G) clearly displaying trust metrics.",
+    "Partners": "Logo grid (NABARD, JSLPS, Ranchi Women's College).",
+    "Volunteer_Donate_Contact": "Forms using Shadcn UI. Modern inputs with focus states (focus:ring-2 focus:ring-emerald-500). Embedded map in contact."
+  },
+  "media_urls": {
+    "hero": [
+      {
+        "url": "https://images.pexels.com/photos/20356784/pexels-photo-20356784.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Farmers in India - hero image",
+        "category": "hero"
+      }
+    ],
+    "gallery": [
+      {
+        "url": "https://images.pexels.com/photos/4579692/pexels-photo-4579692.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Women empowerment rural India",
+        "category": "empowerment"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1759738098462-90ffac98c554",
+        "description": "Women gathered around a traditional loom",
+        "category": "training"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1739242613988-aa1e634cec1d",
+        "description": "A woman is cutting another woman's hair",
+        "category": "health"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1604177091072-b7b677a077f6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwyfHxjb21wdXRlciUyMHRyYWluaW5nJTIwc3R1ZGVudHMlMjBpbmRpYXxlbnwwfHx8fDE3ODI1NjkxMjV8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Computer training students",
+        "category": "education"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1686624386665-4cd01b96d0f6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwzfHxjb21wdXRlciUyMHRyYWluaW5nJTIwc3R1ZGVudHMlMjBpbmRpYXxlbnwwfHx8fDE3ODI1NjkxMjV8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Men sitting at a table - vocational training",
+        "category": "training"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1592820186056-dc600b8ddff4",
+        "description": "Group of men sitting in front of table",
+        "category": "community"
+      }
+    ]
+  },
+  "testing": {
+    "attributes": "All interactive and key informational elements MUST include a data-testid attribute in kebab-case (e.g. data-testid=\"donate-button\")."
+  },
+  "instructions_to_main_agent": [
+    "CRITICAL: The codebase uses .js and .jsx files, NOT TypeScript. Do not create .tsx or .ts files.",
+    "Use Playfair Display for all headings and Manrope for body text. Add them via Google Fonts in index.html.",
+    "Implement the 12 required pages (Home, About, Programs, Projects, Impact, Gallery, Annual Reports, Transparency, Partners, Volunteer, Donate, Contact) using react-router-dom.",
+    "Use framer-motion for smooth entrance animations and hover states.",
+    "Use recharts for the beneficiary bar chart on the Impact page.",
+    "Use standard flex/grid or a library like react-photo-album + yet-another-react-lightbox for the Masonry Gallery.",
+    "Build standard Shadcn UI forms for Contact and Volunteer pages.",
+    "Ensure the design feels highly premium (10/10 visual quality) by applying generous paddings (py-24 or py-32 for sections).",
+    "Integrate Lucide React for consistent iconography across all program cards.",
+    "Add data-testid attributes to all buttons, links, and forms for testing."
+  ]
+}

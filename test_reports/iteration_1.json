@@ -1,0 +1,52 @@
+{
+  "summary": "First full test after MVP build for AASW NGO site. All 11 nav pages load, hero + CTA buttons + stats + program/project preview cards work on Home, all deep pages render (About, Programs 14 cards, Projects 4 cards, ProjectDetail with lightbox nav/close, Impact 6 stat cards + chart, Gallery 44/44 with 'Computer Education' filter correctly showing 6, Reports view/download + PDF modal iframe, Transparency with all 6 compliance values, Partners 3 cards, Donate informational + gateway notice + mailto). Volunteer & Contact form submissions succeed end-to-end (success cards shown, records persisted in MongoDB verified via GET). Mobile menu toggle works. Backend pytest: 7/10 passed. 3 tests failed due to one real backend bug: FastAPI response serializes the id field using the Pydantic alias `_id` instead of `id`, so POST/GET responses expose raw MongoDB _id in JSON and there is no `id` field. Frontend doesn't rely on the id so UI is unaffected, but the API contract is violated.",
+  "backend_issues": {
+    "critical": [
+      {
+        "endpoint": "POST/GET /api/contact and /api/volunteer",
+        "issue": "Response returns MongoDB '_id' key instead of 'id'. Cause: BaseDocument has `id: Optional[PyObjectId] = Field(default=None, alias='_id')` and FastAPI defaults to `response_model_by_alias=True`. Fix: either set `response_model_by_alias=False` on the routes, or map `_id` to `id` in from_mongo/to_mongo and drop the alias for response.",
+        "priority": "HIGH"
+      }
+    ],
+    "minor": []
+  },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": [
+      {
+        "screen": "About page",
+        "issues": ["Timeline section and Director's message section lack data-testid attributes (spec expected timeline / director-message testids). Sections are visually present and correct; only test hooks are missing."]
+      },
+      {
+        "screen": "Contact page",
+        "issues": ["Google Maps iframe area occasionally renders blank in headless snapshot; iframe element itself is present with correct embed URL. Not blocking."]
+      }
+    ]
+  },
+  "test_report_links": [
+    "/app/backend/tests/test_aasw_api.py",
+    "/app/test_reports/pytest/pytest_results.xml"
+  ],
+  "action_items": [
+    "Fix Pydantic/FastAPI response so /api/contact and /api/volunteer return JSON with `id` (string) instead of `_id`. Simplest fix: set `response_model_by_alias=False` on the four routes, or restructure BaseDocument to use `id` field with `_id` handled only in to_mongo/from_mongo.",
+    "(Nice-to-have) Add data-testid='timeline' and data-testid='director-message' on the About page to match test spec."
+  ],
+  "critical_code_review_comments": [
+    "server.py BaseDocument: mixing alias '_id' with FastAPI response_model causes the returned JSON to expose Mongo _id and hide the `id` field — this violates the stated API contract ('returns JSON with id').",
+    "server.py: all routes lack explicit error handling / try-except; a malformed insert will surface as 500. Consider adding try/except and returning meaningful errors.",
+    "No pagination or filtering on GET /api/contact and /api/volunteer (hard-coded 500 limit) — fine for MVP but flag for future scale.",
+    "CORS `allow_origins='*'` combined with `allow_credentials=True` is a subtle CORS anti-pattern (browsers reject credentials with wildcard). Not currently breaking because no credentials are sent, but should be tightened.",
+    "Frontend: no client-side loading UX besides button spinner; consider disabling all inputs while submitting to prevent double posts."
+  ],
+  "updated_files": [
+    "/app/backend/tests/test_aasw_api.py (new)"
+  ],
+  "success_rate": {"backend": "70%", "frontend": "100%"},
+  "test_credentials": "N/A - no auth required",
+  "seed_data_creation": "Created 2 volunteer records (1 via API test, 1 via UI test 'TEST UI Volunteer') and 3 contact records (2 API, 1 UI 'TEST UI Contact'). All prefixed with TEST_ or 'TEST UI'.",
+  "retest_needed": true,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "Backend pytest suite at /app/backend/tests/test_aasw_api.py. The 3 failing tests will pass automatically once the main agent fixes the `_id` vs `id` serialization bug (test_create_and_list_contact, test_create_and_list_volunteer, test_no_mongo_objectid_leak). Frontend flows all pass; forms persist to MongoDB. Mobile menu, lightbox (gallery + project detail), PDF modal viewer, category filter (44->6), CountUp animation, sticky navbar, all nav links, mailto for donate — all verified.",
+  "rca of the issue": "FastAPI serializes response_model using field aliases by default (response_model_by_alias=True). BaseDocument declares `id: Optional[PyObjectId] = Field(default=None, alias='_id')`. Even though obj.id is set to str(inserted_id) after insert, the serializer uses the alias key `_id` for output, so the JSON response contains `_id` (the intended DB key) and drops `id`. Reproduction: `curl -X POST /api/contact -d '{...valid...}'` returns `{\"_id\": \"...\", \"name\": ...}` instead of `{\"id\": \"...\", ...}`. Mitigation: change the four route decorators to `response_model_exclude_none=True, response_model_by_alias=False`, OR redesign BaseDocument to store `id` without alias and translate at the DB boundary in to_mongo()/from_mongo()."
+}

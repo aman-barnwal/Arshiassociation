@@ -1,0 +1,220 @@
+const img = (n) => `/images/${n}.jpeg`;
+
+export const ORG = {
+  name: "Arshi Association for Social Welfare",
+  short: "AASW",
+  tagline: "Empowering Communities. Transforming Lives. Building a Better Tomorrow.",
+  heroText:
+    "Arshi Association for Social Welfare is committed to empowering women, educating youth, promoting healthcare, encouraging sustainable livelihoods, and creating lasting social impact across Jharkhand through community-driven development programmes.",
+  established: "19 September 2020",
+  address: "101, Vandana Apartment, Opposite Amrita Nursing Home, Lalpur, Ranchi – 834001, Jharkhand, India",
+  director: "Ashutosh Kumar",
+  phone: "+91 6206857414",
+  officePhone: "+91 651-3595607",
+  email: "arshiassociation@gmail.com",
+  partnershipEmail: "info@aasw.in",
+  reportPdf: "/annual-report-2023-24.pdf",
+};
+
+export const STATS = [
+  { value: 1619, label: "Lives Reached", suffix: "" },
+  { value: 7, label: "Projects Completed", suffix: "" },
+  { value: 125, label: "Health Camp Beneficiaries", suffix: "+" },
+  { value: 30, label: "Women Trained under MEDP", suffix: "" },
+  { value: 25, label: "Computer Training Beneficiaries", suffix: "" },
+  { value: 30, label: "Women's Day Programme Beneficiaries", suffix: "" },
+];
+
+export const BENEFICIARY_DATA = [
+  { name: "MEDP Training (NABARD)", place: "Murhu, Khunti", beneficiaries: 30 },
+  { name: "Health Camp (RWC)", place: "Lalpur, Ranchi", beneficiaries: 125 },
+  { name: "Computer Training", place: "Upper Bazar, Ranchi", beneficiaries: 25 },
+  { name: "Intl. Mahila Diwas", place: "Murhu, Khunti", beneficiaries: 30 },
+];
+
+export const GALLERY_CATEGORIES = [
+  "All",
+  "Women Empowerment",
+  "Training Programmes",
+  "Community Outreach",
+  "Health Camps",
+  "Computer Education",
+  "Certificate Distribution",
+  "Entrepreneurship",
+  "Workshops",
+  "Village Activities",
+  "Events",
+];
+
+export const GALLERY = [
+  { src: img(1), category: "Village Activities", caption: "Community women gathered in a village of Jharkhand" },
+  { src: img(2), category: "Health Camps", caption: "Health Camp at Ranchi Women's College – awareness session" },
+  { src: img(3), category: "Health Camps", caption: "Health awareness talk at Science Block, Ranchi Women's College" },
+  { src: img(4), category: "Village Activities", caption: "AASW field outreach in rural Jharkhand" },
+  { src: img(5), category: "Community Outreach", caption: "Community meeting with women and children in Khunti" },
+  { src: img(6), category: "Women Empowerment", caption: "Women's group discussion facilitated by AASW" },
+  { src: img(7), category: "Workshops", caption: "Entrepreneurship awareness workshop for rural women" },
+  { src: img(8), category: "Workshops", caption: "Participants at an AASW capacity-building session" },
+  { src: img(9), category: "Village Activities", caption: "Village-level engagement in Murhu, Khunti" },
+  { src: img(10), category: "Community Outreach", caption: "Doorstep outreach with women and children" },
+  { src: img(11), category: "Community Outreach", caption: "Mobilising rural households for development programmes" },
+  { src: img(12), category: "Computer Education", caption: "Free computer training class in Upper Bazar, Ranchi" },
+  { src: img(13), category: "Computer Education", caption: "Digital literacy session for young women" },
+  { src: img(14), category: "Entrepreneurship", caption: "Hands-on enterprise training with village women" },
+  { src: img(16), category: "Certificate Distribution", caption: "Certificate distribution after skill training" },
+  { src: img(17), category: "Certificate Distribution", caption: "Handing over training completion certificates" },
+  { src: img(18), category: "Community Outreach", caption: "AASW team interacting with the community" },
+  { src: img(19), category: "Certificate Distribution", caption: "Trainees felicitated at the completion ceremony" },
+  { src: img(20), category: "Certificate Distribution", caption: "Women receiving certificates of achievement" },
+  { src: img(21), category: "Certificate Distribution", caption: "Felicitation of trainees by dignitaries" },
+  { src: img(22), category: "Entrepreneurship", caption: "MEDP Dhoop Batti training programme in Murhu, Khunti" },
+  { src: img(23), category: "Entrepreneurship", caption: "Women entrepreneurs of the NABARD-supported MEDP" },
+  { src: img(24), category: "Entrepreneurship", caption: "MEDP participants with their training materials" },
+  { src: img(25), category: "Events", caption: "International Mahila Diwas celebration in Murhu, Khunti" },
+  { src: img(26), category: "Training Programmes", caption: "Vocational training session in progress" },
+  { src: img(27), category: "Training Programmes", caption: "Skill development class for young women" },
+  { src: img(28), category: "Training Programmes", caption: "Trainees during a practical learning session" },
+  { src: img(29), category: "Computer Education", caption: "Students at the free computer training centre" },
+  { src: img(30), category: "Computer Education", caption: "Hands-on computer practice for beneficiaries" },
+  { src: img(31), category: "Computer Education", caption: "Learners building digital skills with AASW" },
+  { src: img(32), category: "Computer Education", caption: "Computer education classroom session" },
+  { src: img(33), category: "Certificate Distribution", caption: "Group felicitation of successful trainees" },
+  { src: img(34), category: "Women Empowerment", caption: "A young achiever celebrating her success" },
+  { src: img(35), category: "Women Empowerment", caption: "Glimpses of AASW's women empowerment initiatives" },
+  { src: img(36), category: "Certificate Distribution", caption: "Beautician & HD makeup training – certification" },
+  { src: img(37), category: "Certificate Distribution", caption: "Successful completion of job-oriented training" },
+  { src: img(38), category: "Certificate Distribution", caption: "Beautician training certificates awarded" },
+  { src: img(39), category: "Village Activities", caption: "Women of the community in traditional attire" },
+  { src: img(40), category: "Certificate Distribution", caption: "Trainees with their job training certificates" },
+  { src: img(41), category: "Certificate Distribution", caption: "Certification ceremony for vocational trainees" },
+  { src: img(42), category: "Workshops", caption: "Stakeholder consultation and planning meeting" },
+  { src: img(43), category: "Village Activities", caption: "Community gathering during a village programme" },
+  { src: img(44), category: "Village Activities", caption: "AASW village-level programme participants" },
+];
+
+export const PROGRAMS = [
+  { icon: "HeartHandshake", title: "Women Empowerment", img: img(24), desc: "Building confidence, leadership and financial independence among disadvantaged women through self-help groups, training and enterprise support across Jharkhand." },
+  { icon: "GraduationCap", title: "Skill Development", img: img(27), desc: "Job-oriented skill training – from beautician and HD makeup courses to craft production – that turns potential into employable, income-generating capability." },
+  { icon: "Sprout", title: "Livelihood Promotion", img: img(14), desc: "Creating sustainable income opportunities for rural families through micro-enterprise development, market linkage and hands-on livelihood training." },
+  { icon: "Rocket", title: "Entrepreneurship Development", img: img(22), desc: "NABARD-supported MEDP programmes teaching product manufacturing, pricing, marketing and business management to first-generation women entrepreneurs." },
+  { icon: "Wrench", title: "Vocational Training", img: img(26), desc: "Free, career-specific hands-on education that improves employability, career readiness and self-employment prospects for youth." },
+  { icon: "Monitor", title: "Computer Education", img: img(12), desc: "Free computer training centres that build digital literacy, office productivity skills and confidence for the digital economy." },
+  { icon: "Stethoscope", title: "Healthcare", img: img(2), desc: "Preventive healthcare awareness and access for women and children, guided by the principle that prevention is better than cure." },
+  { icon: "Activity", title: "Health Camps", img: img(3), desc: "Free health screening camps offering hemoglobin, blood pressure, blood sugar and weight tests along with nutrition and mental health counselling." },
+  { icon: "Baby", title: "Child Development", img: img(10), desc: "Nurturing the girl child and marginalized children with education, health awareness and a responsive environment to grow with dignity." },
+  { icon: "Users", title: "Youth Empowerment", img: img(29), desc: "Equipping young people with skills, digital knowledge and career guidance so they can shape their own future." },
+  { icon: "Home", title: "Community Development", img: img(5), desc: "Community-driven programmes that strengthen local institutions, promote inclusion and improve quality of life at the grassroots." },
+  { icon: "Tractor", title: "Rural Development", img: img(9), desc: "Strengthening rural economies in districts like Khunti through enterprise, training and partnerships with NABARD and JSLPS." },
+  { icon: "Leaf", title: "Environmental Awareness", img: img(43), desc: "Promoting environmental consciousness and responsible practices within village communities for a greener Jharkhand." },
+  { icon: "Recycle", title: "Sustainable Development", img: img(44), desc: "Long-term, self-reliant development models that create employment, dignity and lasting social impact." },
+];
+
+export const PROJECTS = [
+  {
+    slug: "dhoop-batti-making",
+    title: "Dhoop Batti Making Programme",
+    subtitle: "MEDP – Micro Enterprise Development Programme, supported by NABARD",
+    location: "Tumbakel Village, Murhu, Khunti",
+    date: "2023–24",
+    beneficiaries: "30 Women Trained",
+    cover: img(22),
+    images: [img(22), img(23), img(24), img(14), img(6), img(9)],
+    summary: "A 15-day intensive incense stick manufacturing training that transformed 30 rural women into confident micro-entrepreneurs.",
+    body: [
+      "The Dhoop Batti (incense stick) Manufacturing Programme was conducted in Tumbakel village, Murhu block of Khunti district with the generous support of NABARD (National Bank for Agriculture and Rural Development) and a Rural Bank, under the Micro Enterprise Development Programme (MEDP).",
+      "Over 15 days of hands-on training, 30 women from the village community learned the complete craft of incense stick manufacturing – from raw material handling and production techniques to machine maintenance, product pricing, market availability and marketing strategy.",
+      "The curriculum went beyond production: participants were trained in entrepreneurship fundamentals, costing, quality control and how to reach local markets, so that the skill translates into a sustainable household income.",
+      "At the close of the programme every participant received a certificate of completion, marking their first formal step into entrepreneurship and self-reliance. The programme stands as a model of how focused, practical training can strengthen rural livelihoods in Jharkhand.",
+    ],
+    highlights: ["15 days of hands-on training", "30 women certified", "Supported by NABARD & Rural Bank", "Production, pricing, marketing & maintenance covered"],
+  },
+  {
+    slug: "international-mahila-diwas",
+    title: "International Mahila Diwas",
+    subtitle: "International Women's Day Programme with NABARD",
+    location: "Murhu, Khunti",
+    date: "1 March 2024",
+    beneficiaries: "30 Women Benefited",
+    cover: img(25),
+    images: [img(25), img(39), img(5), img(1), img(43), img(44)],
+    summary: "A celebration of womanhood focused on financial independence, entrepreneurship, self-help groups and women's leadership.",
+    body: [
+      "On the occasion of International Women's Day, AASW organized the International Mahila Diwas programme at Murhu, Khunti in collaboration with NABARD.",
+      "The programme was designed to promote entrepreneurship and financial independence among rural women. Sessions highlighted the power of Self-Help Groups (SHGs), access to institutional credit, and the role of women's collectives in transforming village economies.",
+      "Women leaders and participants shared experiences of running micro-enterprises, and speakers encouraged every woman present to see herself as a change-maker – economically independent, socially confident and a leader within her community.",
+      "The celebration reinforced AASW's belief that when a woman is empowered, an entire family and community rises with her.",
+    ],
+    highlights: ["Organized with NABARD", "Focus on SHGs & financial independence", "Women's leadership celebrated", "30 direct beneficiaries"],
+  },
+  {
+    slug: "vocational-computer-training",
+    title: "Free Vocational & Computer Training",
+    subtitle: "Digital literacy and employability for youth",
+    location: "Upper Bazar, Ranchi",
+    date: "2023–24",
+    beneficiaries: "25 Computer Training Beneficiaries",
+    cover: img(12),
+    images: [img(12), img(13), img(29), img(30), img(31), img(32), img(26), img(27), img(28), img(36), img(37), img(38)],
+    summary: "Career-specific, hands-on education that improves digital literacy, employability, career readiness and self-employment among youth.",
+    body: [
+      "AASW's Free Vocational and Computer Training programme was designed to bridge the opportunity gap for underprivileged youth by providing career-specific, hands-on education at no cost.",
+      "At the computer training centre in Upper Bazar, Ranchi, 25 young beneficiaries – most of them young women – learned computer fundamentals, office productivity tools and digital skills essential for today's job market.",
+      "Parallel vocational tracks, including the Beautician & HD Makeup job training, gave participants marketable, self-employment-ready skills. Every successful trainee received a certificate recognising their new capability.",
+      "The programme directly improves employability, career readiness and self-employment prospects – helping youth move from aspiration to livelihood.",
+    ],
+    highlights: ["100% free training", "25 computer training beneficiaries", "Beautician & HD makeup vocational track", "Certificates awarded to all successful trainees"],
+  },
+  {
+    slug: "health-camp",
+    title: "Health Camp",
+    subtitle: "Prevention is Better Than Cure",
+    location: "Science Block, Ranchi Women's College",
+    date: "17 October 2023",
+    beneficiaries: "125 Students Screened",
+    cover: img(2),
+    images: [img(2), img(3)],
+    summary: "Over one hundred female students received free health screenings, nutrition awareness and mental health counselling.",
+    body: [
+      "On 17 October 2023, AASW organized a free Health Camp at the Science Block of Ranchi Women's College under the theme 'Prevention is Better Than Cure'.",
+      "Over one hundred and twenty-five female students received comprehensive health screenings including hemoglobin testing, blood pressure measurement, blood sugar testing and weight assessment.",
+      "Alongside the medical screenings, students participated in nutrition awareness sessions that emphasised balanced diets and healthy habits for young women.",
+      "Dr. Anuj Kumar delivered a special talk on mental health, offering counselling and guidance – acknowledging that wellbeing is as much about the mind as the body. The camp exemplified AASW's commitment to preventive, accessible healthcare for young women.",
+    ],
+    highlights: ["125 female students screened", "Hemoglobin, BP, sugar & weight tests", "Nutrition awareness sessions", "Mental health counselling by Dr. Anuj Kumar"],
+  },
+];
+
+export const COMPLIANCE = [
+  { label: "CIN (Ministry of Corporate Affairs)", value: "U85320JH2020NPL015168", icon: "Building2", note: "Registered as a Section 8 Company under the Companies Act, 2013" },
+  { label: "PAN", value: "AAUCA0662P", icon: "CreditCard", note: "Permanent Account Number issued by the Income Tax Department" },
+  { label: "NGO Darpan ID (NITI Aayog)", value: "JH/2020/0267108", icon: "ShieldCheck", note: "Registered on the NITI Aayog NGO Darpan portal" },
+  { label: "CSR Registration", value: "CSR00055256", icon: "Handshake", note: "Eligible to receive CSR funds • Registered 17/06/2023" },
+  { label: "12A Registration", value: "AAUCA0662P22PT01", icon: "FileCheck", note: "Income tax exemption for the organization • Valid 2023–28" },
+  { label: "80G Registration", value: "AAUCA0662P22PT02", icon: "BadgePercent", note: "Donors can claim tax deduction on donations • Valid 2023–28" },
+];
+
+export const PARTNERS = [
+  { name: "NABARD", full: "National Bank for Agriculture and Rural Development", desc: "AASW's key development finance partner, supporting the MEDP Dhoop Batti training and International Mahila Diwas programmes in Khunti district.", icon: "Landmark" },
+  { name: "JSLPS", full: "Jharkhand State Livelihood Promotion Society", desc: "Partner under the Ministry of Rural Development, collaborating on livelihood promotion and rural community development across Jharkhand.", icon: "Network" },
+  { name: "Ranchi Women's College", full: "Educational Partner, Ranchi", desc: "Host and educational partner for the Health Camp that screened over 125 female students at its Science Block campus.", icon: "School" },
+];
+
+export const NAV_LINKS = [
+  { to: "/", label: "Home" },
+  { to: "/about", label: "About" },
+  { to: "/programs", label: "Programs" },
+  { to: "/projects", label: "Projects" },
+  { to: "/impact", label: "Impact" },
+  { to: "/gallery", label: "Gallery" },
+  { to: "/annual-reports", label: "Annual Reports" },
+  { to: "/partners", label: "Partners" },
+  { to: "/volunteer", label: "Volunteer" },
+  { to: "/contact", label: "Contact" },
+];
+
+export const DIRECTOR_MESSAGE = [
+  "Arshi Association for Social Welfare (AASW) enters its fourth year with remarkable confidence. With sharpened clarity on approach and an improved knowledge and talent base, the organization is poised to leap ahead to cover other untouched marginalized children.",
+  "With the turn of this year, AASW feels proud to present its Annual Report 2023–2024, which provides you a glimpse of what we did and achieved this year through our synergized effort.",
+  "This year too, reaching the most marginalized section of our society – empowering women and the girl child through skill development and health awareness – has been our primary goal. In the process, we successfully touched 1,619 young lives through seven projects spread across the districts of the state.",
+  "The CSR bill, passed by Parliament in 2013, has begun to positively affect the work of NGOs and came to us as a significant help this year. As AASW's cost-effective strategies are well suited to the provisions of the CSR Act, I hope that our work will continue to attract corporate organizations in the same manner.",
+];
